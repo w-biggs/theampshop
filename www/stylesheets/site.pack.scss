@@ -11,7 +11,7 @@ html, body {
   box-sizing: inherit;
 }
 h1{
-  margin:(1em/1.8) 0;
+  margin:.5em 0;
 }
 
 /* body styles */
@@ -40,6 +40,7 @@ body{
     max-width: 75rem;
     font-size: 4.5rem;
     font-weight: bold;
+    width: 75vw;
   }
 }
 
@@ -60,13 +61,13 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 75%;
+    width: 75vw;
     margin: 0 auto;
 
     figure.benchitem{
       background-color: white;
-      max-width: 18rem;
-      max-height: 18rem;
+      max-width: 15vw;
+      max-height: 15vw;
       position: relative;
       overflow: hidden;
       margin: 0;

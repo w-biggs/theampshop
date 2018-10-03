@@ -12,6 +12,19 @@ header{
   z-index: 2;
   padding: 0 3vw;
 
+  #nav-expander{
+    width: auto;
+    height: 60%;
+    background-color: transparent;
+    border: none;
+    padding:0;
+    display: none;
+    img{
+      height: 100%;
+      width: auto;
+    }
+  }
+
   nav{
     width: 43rem;
     margin-left: 15vw;
@@ -38,6 +51,13 @@ header{
     }
   }
 
+  #wordmark{
+    margin-top: .5rem;
+    display: none;
+    height: 75%;
+    width: auto;
+  }
+
   address{
     color: white;
     opacity: 0.9;
@@ -45,6 +65,8 @@ header{
     font-weight: 300;
     text-align: center;
     line-height: 1.5;
+    min-width: 23rem;
+    margin: 0 2em;
   }
 
   #cart{
@@ -55,9 +77,19 @@ header{
 }
 
 #desktop-logo{
-  width: 16rem;
+  width: (100vw/7.5);
   position: fixed;
-  top: 1em;
-  left: 2em;
+  top: (100vw/120);
+  left: (100vw/60);
   z-index: 3;
+}
+
+/* media queries */
+@media only screen and (max-width: 1200px) {
+  header nav, header address, #desktop-logo{
+    display: none;
+  }
+  header #nav-expander, header #wordmark{
+    display: block;
+  }
 }
