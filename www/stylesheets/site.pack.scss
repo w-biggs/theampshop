@@ -37,7 +37,13 @@ body{
   }
 }
 
+/* content */
+#content{
+  background-color: #FF3535;
+}
+
 /* imports */
 @import 'header.pack.scss';
+@import 'footer.pack.scss';
 @import 'home.pack.scss';
 @import url("https://use.typekit.net/lgm4sew.css");
