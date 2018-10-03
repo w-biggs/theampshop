@@ -6,14 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" type="text/css" href="/stylesheets/site.css">
 </head>
-<body>
+<body class="home">
   {{> header}}
-  <div class="banner" id="homebanner">
-    <span>The Amp Shop is a Guitar, Bass and PA amplifier repair shop run by ex-studio maintenance engineer Ron Meersand.</span>
-  </div>
-  <section id="content">
-    {{> footer}}
+  <section class="banner" id="homebanner">
+    <h1>{{tagline}}</h1>
   </section>
+  <main>
+    <section id="bench">
+      <h1>What's on the bench?</h1>
+      <div id="benchitems">
+        {{#section benchitems}}
+          <figure class="benchitem">
+            {{benchitem type=image}}
+            <figcaption>{{benchitemname}}</figcaption>
+          </figure>
+        {{/section}}
+      </div>
+    </section>
+    {{> footer}}
+  </main>
+  <div id="bottompad"></div>
   <script src="/javascripts/site.js"></script>
 </body>
 </html>

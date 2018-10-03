@@ -1,5 +1,6 @@
 /* variables */
 $dinstack: din-2014,FF DIN,DIN Pro,sans-serif;
+$sysstack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 /* resets */
 html, body {
@@ -9,37 +10,92 @@ html, body {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+h1{
+  margin:(1em/1.8) 0;
+}
 
 /* body styles */
 body{
   background-image: url('images/nocolor.jpg');
   background-size: 105%;
-  background-position: center 22%;
+  background-position: center -13rem;
   font-family: ff-tisa-web-pro,Tisa Pro,Georgia,serif;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 /* banner */
 .banner{
   background-color: #B7EBEB;
-  height: 14rem;
+  height: 12rem;
   opacity: .86;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 4.5rem;
-  font-weight: bold;
   
-  span{
+  h1{
     max-width: 75rem;
+    font-size: 4.5rem;
+    font-weight: bold;
   }
 }
 
 /* content */
-#content{
+main{
   background-color: #FF3535;
+  text-align: center;
+
+  section h1{
+    font-size: 3rem;
+    font-family: $dinstack;
+  }
+}
+
+/* what's on the bench? */
+#bench{
+  #benchitems{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 75%;
+    margin: 0 auto;
+
+    figure.benchitem{
+      background-color: white;
+      max-width: 18rem;
+      max-height: 18rem;
+      position: relative;
+      overflow: hidden;
+      margin: 0;
+      border:.25rem white solid;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img{
+        max-width: 100%;
+      }
+      figcaption{
+        position: absolute;
+        left: 0rem;
+        right: 0rem;
+        bottom: 0rem;
+        background-color: rgba(0,0,0,0.7);
+        color: white;
+        font-family: $sysstack;
+        padding: .25em .5em;
+        text-align: left;
+      }
+    }
+  }
+}
+
+/* bottompad */
+#bottompad{
+  background-color: #444444;
+  opacity: .86;
+  flex:1;
 }
 
 /* imports */

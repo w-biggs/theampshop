@@ -1,12 +1,12 @@
 header{
-  height: 6.25rem;
+  height: 5rem;
   background-color: #444;
   display: flex;
   align-items: center;
   font-family: $dinstack;
 
   #navspacer{
-    width: 25rem;
+    width: 22rem;
     display: inline-block;
   }
 
@@ -17,7 +17,7 @@ header{
   }
 
   a.navitem{
-    font-size: 2.25rem;
+    font-size: 2rem;
     color:white;
     text-decoration: none;
     opacity: .6;
@@ -37,7 +37,7 @@ header{
 }
 
 #desktop-logo{
-  width: 18.75rem;
+  width: 16rem;
   position: absolute;
   top: 1em;
   left: 2em;
