@@ -3,15 +3,18 @@ header{
   background-color: #444;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   font-family: $dinstack;
-
-  #navspacer{
-    width: 22rem;
-    display: inline-block;
-  }
+  position: fixed;
+  left:0;
+  right:0;
+  top:0;
+  z-index: 2;
+  padding: 0 3vw;
 
   nav{
     width: 43rem;
+    margin-left: 15vw;
     display: flex;
     justify-content: space-between;
   }
@@ -23,23 +26,38 @@ header{
     opacity: .6;
     transition: opacity .25s ease;
     font-weight: 600;
+
+    &.current{
+      opacity: 1;
+      pointer-events: none;
+    }
+
+    &:hover{
+      color:white;
+      opacity: 1;
+    }
   }
 
-  a.navitem.current{
-    opacity: 1;
-    pointer-events: none;
+  address{
+    color: white;
+    opacity: 0.9;
+    font-style: normal;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.5;
   }
 
-  a.navitem:hover{
-    color:white;
-    opacity: 1;
+  #cart{
+    width: 3rem;
+    height: 2.75rem;
+    background-color: rgba(255,255,255,0.2);
   }
 }
 
 #desktop-logo{
   width: 16rem;
-  position: absolute;
+  position: fixed;
   top: 1em;
   left: 2em;
-  z-index: 2;
+  z-index: 3;
 }
