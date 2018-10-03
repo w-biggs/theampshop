@@ -1,0 +1,45 @@
+header{
+  height: 6.25rem;
+  background-color: #444;
+  display: flex;
+  align-items: center;
+  font-family: $dinstack;
+
+  #navspacer{
+    width: 25rem;
+    display: inline-block;
+  }
+
+  nav{
+    width: 43rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  a.navitem{
+    font-size: 2.25rem;
+    color:white;
+    text-decoration: none;
+    opacity: .6;
+    transition: opacity .25s ease;
+    font-weight: 600;
+  }
+
+  a.navitem.current{
+    opacity: 1;
+    pointer-events: none;
+  }
+
+  a.navitem:hover{
+    color:white;
+    opacity: 1;
+  }
+}
+
+#desktop-logo{
+  width: 18.75rem;
+  position: absolute;
+  top: 1em;
+  left: 2em;
+  z-index: 2;
+}

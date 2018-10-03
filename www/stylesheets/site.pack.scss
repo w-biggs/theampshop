@@ -1,0 +1,41 @@
+/* variables */
+$dinstack: din-2014,FF DIN,DIN Pro,sans-serif;
+
+/* resets */
+html, body {
+  box-sizing: border-box;
+  margin:0;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* body styles */
+body{
+  background-image: url('images/nocolor.jpg');
+  background-size: 105%;
+  background-position: center 22%;
+  font-family: ff-tisa-web-pro,Tisa Pro,Georgia,serif;
+}
+
+/* banner */
+.banner{
+  background-color: #B7EBEB;
+  height: 14rem;
+  opacity: .86;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: bold;
+  
+  span{
+    max-width: 75rem;
+  }
+}
+
+/* imports */
+@import 'header.pack.scss';
+@import 'home.pack.scss';
+@import url("https://use.typekit.net/lgm4sew.css");

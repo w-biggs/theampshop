@@ -1,0 +1,11 @@
+{
+  "name": "theampshop",
+  "vapid": {
+  },
+  "scripts": {
+    "start": "vapid start ."
+  },
+  "dependencies": {
+    "vapid-cli": "^0.1.25"
+  }
+}
