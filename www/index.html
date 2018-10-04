@@ -17,7 +17,7 @@
       <div id="benchitems">
         {{#section benchitems}}
           <figure class="benchitem">
-            {{benchitem type=image}}
+            <img src="{{benchitem type=image tag=false}}" alt="{{benchitemname}}">
             <figcaption>{{benchitemname}}</figcaption>
           </figure>
         {{/section}}
