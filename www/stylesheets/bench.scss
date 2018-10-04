@@ -7,6 +7,7 @@
     align-items: center;
     width: 75vw;
     margin: 0 auto;
+    flex-flow: wrap;
 
     figure.benchitem{
       background-color: white;
@@ -33,6 +34,18 @@
         padding: .25em .5em;
         text-align: left;
       }
+    }
+  }
+}
+
+/* media queries */
+@media only screen and (max-width: 1000px) {
+  #bench #benchitems figure.benchitem{
+    max-width: 34vw;
+    max-height: 34vw;
+    
+    &:nth-of-type(n+3){
+      margin-top: 7vw;
     }
   }
 }
