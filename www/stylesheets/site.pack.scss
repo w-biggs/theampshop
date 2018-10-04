@@ -55,44 +55,6 @@ main{
   }
 }
 
-/* what's on the bench? */
-#bench{
-  #benchitems{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 75vw;
-    margin: 0 auto;
-
-    figure.benchitem{
-      background-color: white;
-      max-width: 15vw;
-      max-height: 15vw;
-      position: relative;
-      overflow: hidden;
-      margin: 0;
-      border:.25rem white solid;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      img{
-        max-width: 100%;
-      }
-      figcaption{
-        position: absolute;
-        left: 0rem;
-        right: 0rem;
-        bottom: 0rem;
-        background-color: rgba(0,0,0,0.7);
-        color: white;
-        font-family: $sysstack;
-        padding: .25em .5em;
-        text-align: left;
-      }
-    }
-  }
-}
-
 /* bottompad */
 #bottompad{
   background-color: #444444;
@@ -104,4 +66,5 @@ main{
 @import 'header.scss';
 @import 'footer.scss';
 @import 'home.scss';
+@import 'bench.scss';
 @import url("https://use.typekit.net/lgm4sew.css");
