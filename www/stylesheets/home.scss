@@ -1,9 +1,9 @@
 body.home{
   .banner{
-    height: 24rem;
+    font-size: 2.5rem;
+    height: 9.6em;
 
     h1{
-      font-size: 2.5rem;
       font-weight: 400;
     }
   }
@@ -12,8 +12,13 @@ body.home{
 /* media queries */
 @media only screen and (max-width: 768px) {
   body.home .banner{
-    h1 {
-      font-size: 2rem;
-    }
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  body.home .banner{
+    height: 12em;
+    font-size: 1.5rem;
   }
 }
