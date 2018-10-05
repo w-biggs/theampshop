@@ -17,9 +17,9 @@
     <section id="bench">
       <h1>What's on the Bench?</h1>
       <div id="benchitems">
-        {{#section benchitems}}
+        {{#section benchitems label="Bench Items"}}
           <figure class="benchitem">
-            <a href="{{benchitem type=image tag=false}}" data-caption="{{benchitemname}}"><img src="{{benchitem type=image tag=false}}" alt="{{benchitemname}}"></a>
+            <a href='{{benchitem type=image tag=false label="Bench Item"}}' data-caption='{{benchitemname label="Name of Bench Item"}}'><img src="{{benchitem type=image tag=false}}" alt="{{benchitemname}}"></a>
             <figcaption>{{benchitemname}}</figcaption>
           </figure>
         {{/section}}
