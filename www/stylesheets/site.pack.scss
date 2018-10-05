@@ -50,10 +50,21 @@ main{
   background-color: #FF3535;
   text-align: center;
 
-  section h1{
-    font-size: 3.25rem;
-    font-family: $dinstack;
-    max-width: 90%;
+  section.content{
+    background-color: #FFFAFA;
+    width: 80vw;
+    max-width: 1250px;
+    padding-bottom: 2rem;
+    margin: 0 auto;
+    overflow: auto;
+    border-radius: 0 0 1em 1em;
+
+    h1{
+      font-size: 3.25rem;
+      font-family: $dinstack;
+      display: inline-block;
+      max-width: 90%;
+    }
   }
 }
 

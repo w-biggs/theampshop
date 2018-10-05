@@ -7,6 +7,9 @@ body.home{
       font-weight: 400;
     }
   }
+  main section.content{
+    max-width: none;
+  }
 }
 
 /* media queries */
