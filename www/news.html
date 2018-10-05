@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Us – The Amp Shop Philadelphia</title>
+  {{> head}}
+</head>
+<body class="about">
+  {{> header}}
+  <section class="banner">
+    <h1>About Us</h1>
+  </section>
+  <main>
+      <section class="content">
+        {{#section news label="News" order=-_created_at}}
+          <article class="post">
+            <h1>{{title}}</h1>
+            {{content type=html editor=false}}
+            <time class="pubdate" datetime='{{_created_at format="%Y-%m-%d"}}'>{{_created_at format="%m/%d/%Y"}}</time>
+          </article>
+        {{/section}}
+      </section>
+    {{> footer}}
+  </main>
+{{> foot}}
