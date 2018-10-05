@@ -72,7 +72,20 @@ header{
   #cart{
     width: 3rem;
     height: 2.75rem;
-    background-color: rgba(255,255,255,0.2);
+    background-image: url('images/cart.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+    font-family: $dinstack;
+    position: relative;
+
+    span{
+      position: absolute;
+      top: 21%;
+      left: 34%;
+      font-size: .875em;
+    }
   }
 }
 
