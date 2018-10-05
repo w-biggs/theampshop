@@ -99,6 +99,9 @@ header{
 
 /* media queries */
 @media only screen and (max-width: 1200px) {
+  header{
+    padding: 0 5vw;
+  }
   header nav, header address, #desktop-logo{
     display: none;
   }
