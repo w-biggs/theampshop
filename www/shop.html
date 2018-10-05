@@ -18,9 +18,18 @@
               <img src='{{prodimg label="Product Image" type=image tag=false}}' alt="cable">
               <div class="prodinfo">
                 <span class="prodname">{{prodname label="Product Name"}}</span>
-                <span class="prodprice">{{prodprice label="Product Price"}}</span>
+                <span class="prodprice">${{prodprice label="Product Price"}}</span>
               </div>
-              <span class="addtocart">+ add to cart</span>
+              <button 
+                class="addtocart snipcart-add-item"
+                data-item-id='{{prodid label="Product ID"}}'
+                data-item-name='{{prodname}}'
+                data-item-price='{{prodprice}}'
+                data-item-weight='{{prodweight label="Weight (grams)"}}'
+                data-item-description='{{prodinfo label="Product Info"}}'
+                data-item-url="shop.html">
+                + add to cart
+              </button>
             </div>
           {{/section}}
         </div>
