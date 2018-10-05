@@ -38,6 +38,13 @@
   }
 }
 
+/* lightbox */
+#baguetteBox-overlay .full-image figcaption{
+  font-size: 1.5rem;
+  color: white;
+  font-family: $dinstack;
+}
+
 /* media queries */
 @media only screen and (max-width: 992px) {
   #bench #benchitems figure.benchitem{

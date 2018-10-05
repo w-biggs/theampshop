@@ -4,6 +4,7 @@
   <title>Vapid Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.css" integrity="sha256-cKiyvRKpm8RaTdU71Oq2RUVgvfWrdIXjvVdQF2oZ1Y4=" crossorigin="anonymous" />
   <link rel="stylesheet" type="text/css" href="/stylesheets/site.css">
 </head>
 <body class="home">
@@ -17,7 +18,7 @@
       <div id="benchitems">
         {{#section benchitems}}
           <figure class="benchitem">
-            <img src="{{benchitem type=image tag=false}}" alt="{{benchitemname}}">
+            <a href="{{benchitem type=image tag=false}}" data-caption="{{benchitemname}}"><img src="{{benchitem type=image tag=false}}" alt="{{benchitemname}}"></a>
             <figcaption>{{benchitemname}}</figcaption>
           </figure>
         {{/section}}
@@ -27,5 +28,7 @@
   </main>
   <div id="bottompad"></div>
   <script src="/javascripts/site.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.js" integrity="sha256-M8OBGpIlSamFg0JKTSQH3cV08uPGY68Caoxr9383Sbw=" crossorigin="anonymous"></script>
+  <script>baguetteBox.run('#benchitems');</script>
 </body>
 </html>
