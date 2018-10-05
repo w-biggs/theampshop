@@ -13,7 +13,7 @@
     <section class="content" id="bench">
       <h1>What's on the Bench?</h1>
       <div id="benchitems">
-        {{#section benchitems label="Bench Items"}}
+        {{#section benchitems label="Bench Items" sortable=true}}
           <figure class="benchitem">
             <a href='{{benchitem type=image tag=false label="Bench Item"}}' data-caption='{{benchitemname label="Name of Bench Item"}}'><img src="{{benchitem type=image tag=false}}" alt="{{benchitemname}}"></a>
             <figcaption>{{benchitemname}}</figcaption>
