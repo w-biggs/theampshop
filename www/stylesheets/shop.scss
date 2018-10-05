@@ -1,4 +1,4 @@
-body.shop section.content{
+body.shop main section.content{
   text-align: center;
   padding-top: 0;
 
@@ -13,6 +13,7 @@ body.shop section.content{
     display: flex;
     width: 100%;
     justify-content: space-around;
+    flex-flow: wrap;
   
     .product{
       width: 25%;
@@ -36,9 +37,52 @@ body.shop section.content{
       }
       
       .addtocart{
-        margin-left: auto;
         font-size: 1.25rem;
         font-family: $dinstack;
+        background: transparent;
+        padding: 0;
+        border: 0;
+        cursor: pointer;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 992px) {
+  body.shop main section.content .products .product{
+    width: 40%;
+    
+    &:nth-of-type(n+3){
+      margin-top: 3rem;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  body.shop main section.content{
+    h1{
+      font-size: 1.75rem;
+    }
+
+    .products .product{
+      .prodinfo{
+        font-size: 1.25rem;
+      }
+      .addtocart{
+        font-size: 1.125rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 576px) {
+  body.shop main section.content{
+    h1{
+      font-size: 1.5rem;
+    }
+    
+    .products .product{
+      width: 80%;
+      
+      &:nth-of-type(n+2){
+        margin-top: 2rem;
       }
     }
   }
