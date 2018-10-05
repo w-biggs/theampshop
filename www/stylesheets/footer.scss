@@ -4,6 +4,10 @@ footer{
   font-weight: 300;
   opacity: 0.6;
   padding: 1rem;
+  
+  a, a:visited{
+    color:inherit;
+  }
 }
 
 /* media queries */
