@@ -13,8 +13,8 @@
     {{#section contact label="Contact Page"}}
       <section class="content">
         <p>{{contactinfo label="Contact Info"}}</p>
-        <iframe id="mapsembed" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJkbcf9dTJxokRTTvGLZML1tA&key=AIzaSyAw_98JdUdSN1-9qXi2JVxpYauIrOFXbXU" allowfullscreen></iframe>
-        <iframe id="fbembed" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTheAmpShop%2F&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1848217848608253" width="340" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        {{mapsembed label="Google Maps embed" type=html editor=false}}
+        {{fbembed label="Facebook embed" type=html editor=false}}
       </section>
     {{/section}}
     {{> footer}}
