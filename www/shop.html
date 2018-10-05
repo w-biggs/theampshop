@@ -4,13 +4,26 @@
   <title>Shop – The Amp Shop Philadelphia</title>
   {{> head}}
 </head>
-<body class="news">
+<body class="shop">
   {{> header}}
   <section class="banner">
     <h1>Shop</h1>
   </section>
   <main>
       <section class="content">
+        <h1>{{sectiontext Label="Section Page Text"}}</h1>
+        <div class="products">
+          {{#section products sortable=true}}
+            <div class="product">
+              <img src='{{prodimg label="Product Image" type=image tag=false}}' alt="cable">
+              <div class="prodinfo">
+                <span class="prodname">{{prodname label="Product Name"}}</span>
+                <span class="prodprice">{{prodprice label="Product Price"}}</span>
+              </div>
+              <span class="addtocart">+ add to cart</span>
+            </div>
+          {{/section}}
+        </div>
       </section>
     {{> footer}}
   </main>
