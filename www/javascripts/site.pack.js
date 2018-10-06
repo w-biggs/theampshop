@@ -7,3 +7,7 @@
 // import './fileName'
 //
 // To learn more, visit https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
+
+document.getElementById("nav-expander").onclick = function(){
+  document.querySelectorAll("nav[role='navigation']")[0].classList.toggle("collapsed");
+}

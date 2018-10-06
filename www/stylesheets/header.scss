@@ -30,10 +30,10 @@ header{
     margin-left: 15vw;
     display: flex;
     justify-content: space-between;
+    font-size: 2rem;
   }
 
   a.navitem{
-    font-size: 2rem;
     color:white;
     text-decoration: none;
     opacity: .6;
@@ -102,10 +102,42 @@ header{
   header{
     padding: 0 5vw;
   }
-  header nav, header address, #desktop-logo{
+  header address, #desktop-logo{
     display: none;
   }
   header #nav-expander, header #wordmark{
     display: block;
+  }
+  header nav{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #444;
+    align-items: center;
+    margin: 0;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+    transform:scaleY(1);
+    transform-origin:top;
+
+    a.navitem{
+      margin: .25em 0;
+
+      &:first-of-type{
+        margin-top: .5em;
+      }
+
+      &:last-of-type{
+        margin-bottom: .5em;
+      }
+    }
+
+    &.collapsed{
+      transform:scaleY(0);
+    }
   }
 }
