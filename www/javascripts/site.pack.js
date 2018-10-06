@@ -9,3 +9,15 @@
 // To learn more, visit https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
 
 import './nav.js';
+
+/* making header current-page styles work (temporary, until vapid lets you pass data to partials) */
+
+var navElement = document.querySelectorAll("nav[role='navigation']")[0];
+var navItems = navElement.children;
+var pathName = window.location.pathname;
+for (var i = 0; i < navItems.length; i++) {
+  var href = navItems[i].getAttribute("href").replace(".html","");
+  if (pathName.indexOf(href) !== -1){
+    navItems[i].classList.add("current");
+  }
+}
