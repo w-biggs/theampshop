@@ -15,6 +15,10 @@ import './nav.js';
 var navElement = document.querySelectorAll("nav[role='navigation']")[0];
 var navItems = navElement.children;
 var pathName = window.location.pathname;
+if (pathName === "/"){
+  pathName = "/index.html"
+}
+console.log(pathName);
 for (var i = 0; i < navItems.length; i++) {
   var href = navItems[i].getAttribute("href").replace(".html","");
   if (pathName.indexOf(href) !== -1){
