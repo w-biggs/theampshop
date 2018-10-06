@@ -31,6 +31,7 @@ header{
     display: flex;
     justify-content: space-between;
     font-size: 2rem;
+    flex: 1;
   }
 
   a.navitem{
@@ -102,7 +103,16 @@ header{
   header{
     padding: 0 5vw;
   }
-  header address, #desktop-logo{
+  header address{
+    display: none;
+  }
+  header nav{
+    margin-right: 2em;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #desktop-logo{
     display: none;
   }
   header #nav-expander, header #wordmark{
