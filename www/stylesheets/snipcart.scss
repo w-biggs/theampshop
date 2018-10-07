@@ -1,0 +1,52 @@
+/* overriding the default snipcart styling */
+
+.snip-layout{
+  font-family: inherit;
+
+  .snip-header{
+    background-color: #FF3535;
+    color: black;
+    text-transform: capitalize;
+
+    .snip-header__total{
+      background-color: white;
+    }
+  }
+
+  .snip-footer, .snip-product__empty, .snip-layout__loading, .snip-table__loading, .snip-product__name{
+    text-transform: none;
+  }
+  
+  .snip-footer{
+    background: transparent;
+
+    .snip-footer__copyright{
+      font-size: 12px;
+    }
+  }
+
+  .snip-table__header,
+  .snip-footer,
+  .snip-product__description,
+  .snip-table__small-col,
+  #snipcart-apply-discount button,
+  input, select,
+  .snip-form__container,
+  .snip-static__content,
+  #snipcart-total .snip-table__cell--highlight,
+  #snipcart-fees .snip-table__cell--highlight {
+    font-family: $dinstack;
+  }
+
+  .snip-quantity-trigger__btn::before{
+    padding: 1px 1px 0 0;
+  }
+
+  .snip-table__header, #snipcart-apply-discount button, #snipcart-apply-discount input{
+    letter-spacing: .5px;
+  }
+
+  #snipcart-apply-discount .snip-btn{
+    font-weight: 400;
+  }
+}
