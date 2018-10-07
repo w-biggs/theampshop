@@ -9,4 +9,110 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .modal:not(:first-of-type){
+    display: none;
+  }
+
+  .modal{
+    background-color: white;
+    display: flex;
+    width: 56em;
+    padding: 3rem;
+    justify-content: space-between;
+    box-sizing: content-box;
+    position: relative;
+
+    .modal-close{
+      font-family: $dinstack;
+      position: absolute;
+      top: .5em;
+      right: .5em;
+      font-size: 2em;
+      line-height: 1;
+      color: #FF3535;
+      background: transparent;
+      padding: 0;
+      border: none;
+      cursor: pointer;
+    }
+
+    .modalpics{
+      flex-basis: 27rem;
+      box-sizing: border-box;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      img{
+        height: 20rem;
+        width: 100%;
+        border:.125rem #aaa solid;
+
+        &.subimg{
+          width: 22%;
+          height: 22%;
+          margin-top: 4%;
+        }
+      }
+    }
+
+    .modalinfo{
+      flex-basis: 27rem;
+      box-sizing: border-box;
+
+      h1{
+        margin: 0;
+        line-height: 1;
+      }
+
+      span{
+        display: block;
+        line-height: 1;
+        font-weight: 600;
+
+        &.modal-prodprice{
+          font-family: $dinstack;
+          font-size: 2.25em;
+          margin: .75em 0;
+          small{
+            font-size: (2em/3);
+          }
+          color: #209999;
+        }
+
+        &.stock{
+          font-family: $dinstack;
+          font-size: 1.5em;
+          margin-top: 1em;
+          color: #7DBA04;
+        }
+      }
+
+      button.modal-addtocart{
+        border:0;
+        background-color: #FF3535;
+        font-size: 2em;
+        font-family: inherit;
+        line-height: 1;
+        color: white;
+        padding: .25em 1em .4em 1em;
+        margin: .4em 0 .5em 0;
+        cursor: pointer;
+      }
+
+      div.fullinfo{
+        font-family: $dinstack;
+        font-size: 1.25em;
+        line-height: 1.75;
+        p{
+          margin:0;
+        }
+        ul{
+          margin:0;
+          padding-left: 1em;
+        }
+      }
+    }
+  }
 }

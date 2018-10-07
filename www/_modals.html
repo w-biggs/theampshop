@@ -1,1 +1,30 @@
-<div id="cover"></div>
+<div id="cover">
+  {{#section products sortable=true}}
+    <div class="modal modal-{{prodid label='Product ID'}}">
+      <button class="modal-close">X</button>
+      <div class="modalpics">
+        <img src='{{prodimg label="Product Image" type=image tag=false}}' alt="cable">
+        <img class="subimg" src='{{prodimg label="Product Image" type=image tag=false}}' alt="cable">
+        <img class="subimg" src='{{prodimg label="Product Image" type=image tag=false}}' alt="cable">
+        <img class="subimg" src='{{prodimg label="Product Image" type=image tag=false}}' alt="cable">
+        <img class="subimg" src='{{prodimg label="Product Image" type=image tag=false}}' alt="cable">
+      </div>
+      <div class="modalinfo">
+        <h1 class="modal-prodname">{{prodname label="Product Name"}}</h1>
+        <span class="modal-prodprice">${{prodprice}}.00<small>/ea</small></span>
+        <span class="stock">In stock!</span>
+        <button 
+          class="modal-addtocart snipcart-add-item"
+          data-item-id='{{prodid label="Product ID"}}'
+          data-item-name='{{prodname}}'
+          data-item-price='{{prodprice}}'
+          data-item-weight='{{prodweight label="Weight (grams)"}}'
+          data-item-description='{{prodinfo label="Short Product Info"}}'
+          data-item-url="shop.html">
+          Add to cart
+        </button>
+        <div class="fullinfo">{{fullprodinfo label="Full Product Info" type=html editor=markdown}}</div>
+      </div>
+    </div>
+  {{/section}}
+</div>

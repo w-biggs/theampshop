@@ -14,20 +14,20 @@
       <section class="content">
         <h1>{{sectiontext Label="Section Page Text"}}</h1>
         <div class="products">
-          {{#section products sortable=true}}
+          {{#section products}}
             <div class="product">
               <img src='{{prodimg label="Product Image" type=image tag=false}}' alt="cable">
               <div class="prodinfo">
-                <span class="prodname">{{prodname label="Product Name"}}</span>
-                <span class="prodprice">${{prodprice label="Product Price"}}</span>
+                <span class="prodname">{{prodname}}</span>
+                <span class="prodprice">${{prodprice}}</span>
               </div>
               <button 
                 class="addtocart snipcart-add-item"
-                data-item-id='{{prodid label="Product ID"}}'
+                data-item-id='{{prodid}}'
                 data-item-name='{{prodname}}'
                 data-item-price='{{prodprice}}'
-                data-item-weight='{{prodweight label="Weight (grams)"}}'
-                data-item-description='{{prodinfo label="Product Info"}}'
+                data-item-weight='{{prodweight}}'
+                data-item-description='{{prodinfo}}'
                 data-item-url="shop.html">
                 + add to cart
               </button>
