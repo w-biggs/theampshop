@@ -115,8 +115,14 @@ header{
   #desktop-logo{
     display: none;
   }
-  header #nav-expander, header #wordmark{
-    display: block;
+  header{
+    justify-content: flex-start;
+    #nav-expander, #wordmark, a.snipcart-summary{
+      display: block;
+    }
+    #wordmark{
+      margin: 0.5rem auto 0 auto;
+    }
   }
   header nav{
     position: absolute;
