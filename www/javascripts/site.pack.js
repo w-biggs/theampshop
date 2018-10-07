@@ -34,8 +34,13 @@ for (var i = 0; i < navItems.length; i++) {
 
 var products = document.getElementsByClassName("product");
 for (var i = 0; i < products.length; i++){
-  products[i].onclick = function(){
-    modalShow(this.id);
+  products[i].onclick = function(e){
+    var cartLink = this.querySelector(".addtocart");
+    if(e.target == cartLink){
+      return;
+    } else {
+      modalShow(this.id);
+    }
   }
 }
 
