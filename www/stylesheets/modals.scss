@@ -9,9 +9,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 1;
+  transition: .5s opacity ease;
 
-  .modal:not(:first-of-type){
+  &.hiding{
+    opacity: 0;
+  }
+
+  &.hide-modals{
     display: none;
+    opacity: 0;
   }
 
   .modal{
@@ -21,6 +28,10 @@
     padding: 3rem;
     justify-content: space-between;
     position: relative;
+
+    &.hidden-modal{
+      display: none;
+    }
 
     .modal-close{
       font-family: $dinstack;
@@ -134,13 +145,13 @@
     .modalinfo{
       font-size: .8em;
     }
+    .modal-close{
+      font-size: 1.6em;
+    }
   }
 }
 
 @media only screen and (max-width: 576px) {
-  body{
-    overflow: hidden;
-  }
   #cover{
     align-items: flex-start;
     padding: 5vw;
@@ -149,8 +160,8 @@
       flex-direction: column;
       align-items: center;
       .modal-close{
-        top: .25em;
-        right: .25em;
+        top: (1em/3);
+        right: (1em/3);
       }
       .modalpics{
         margin: 0 0 1rem 0;

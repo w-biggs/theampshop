@@ -29,3 +29,45 @@ for (var i = 0; i < navItems.length; i++) {
     navItems[i].classList.add("current");
   }
 }
+
+/* modals */
+
+var products = document.getElementsByClassName("product");
+for (var i = 0; i < products.length; i++){
+  products[i].onclick = function(){
+    modalShow(this.id);
+  }
+}
+
+var cover = document.getElementById("cover");
+
+function modalShow(productId){
+  document.getElementsByTagName("body")[0].style.overflow = "hidden";
+  cover.classList.remove("hide-modals");
+  cover.classList.add("hiding");
+  window.requestAnimationFrame(function(){
+    cover.classList.remove("hiding");
+    document.getElementById("modal-" + productId).classList.remove("hidden-modal");
+  })
+}
+
+var modalCloseButtons = document.getElementsByClassName("modal-close");
+for (var i = 0; i < modalCloseButtons.length; i++){
+  modalCloseButtons[i].onclick = function(){
+    modalHide();
+  }
+}
+
+function modalHide(){
+  document.getElementsByTagName("body")[0].style.overflow = "";
+  cover.classList.add("hiding");
+  cover.addEventListener("transitionend", function handler(event){
+    cover.classList.remove("hiding");
+    cover.classList.add("hide-modals");
+    var modals = document.getElementsByClassName("modal");
+    for (var i = 0; i < modals.length; i++){
+      modals[i].classList.add("hidden-modal");
+    }
+    cover.removeEventListener("transitionend", handler);
+  });
+}

@@ -1,6 +1,6 @@
-<div id="cover">
+<div id="cover" class="hide-modals">
   {{#section products sortable=true}}
-    <div class="modal modal-{{prodid label='Product ID'}}">
+    <div class="modal hidden-modal" id="modal-{{prodid label='Product ID'}}">
       <button class="modal-close">X</button>
       <div class="modalpics">
         <a href='{{prodimg label="Product Image" type=image tag=false}}' class="imgcontainer">
