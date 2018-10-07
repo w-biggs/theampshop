@@ -145,6 +145,13 @@ main{
   }
 }
 
+@media only screen and (orientation: portrait) {
+  body{
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
 /* imports */
 @import 'header.scss';
 @import 'footer.scss';
