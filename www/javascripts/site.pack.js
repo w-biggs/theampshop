@@ -10,6 +10,10 @@
 
 import './nav.js';
 
+/* lightboxes */
+
+baguetteBox.run('#benchitems');
+
 /* making header current-page styles work (temporary, until vapid lets you pass data to partials) */
 
 var navElement = document.querySelectorAll("nav[role='navigation']")[0];
