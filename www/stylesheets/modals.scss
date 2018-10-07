@@ -20,7 +20,6 @@
     width: 56em;
     padding: 3rem;
     justify-content: space-between;
-    box-sizing: content-box;
     position: relative;
 
     .modal-close{
@@ -38,28 +37,40 @@
     }
 
     .modalpics{
-      flex-basis: 27rem;
-      box-sizing: border-box;
+      margin-right: 1rem;
       display: flex;
       flex-wrap: wrap;
+      flex: 1;
       justify-content: space-between;
+      align-content: center;
 
-      img{
-        height: 20rem;
+      .imgcontainer{
         width: 100%;
+        padding-bottom: 75%;
+        position: relative;
+        overflow: hidden;
         border:.125rem #aaa solid;
+        height: 0;
+        display: block;
+
+        img{
+          width: 100%;
+          position: absolute;
+          top: 50%; bottom: 0; left: 0; right: 0;
+          transform: translateY(-50%);
+        }
 
         &.subimg{
           width: 22%;
-          height: 22%;
+          padding-bottom: 22%;
           margin-top: 4%;
         }
       }
     }
 
     .modalinfo{
-      flex-basis: 27rem;
-      box-sizing: border-box;
+      margin-left: 1rem;
+      flex: 1;
 
       h1{
         margin: 0;
@@ -112,6 +123,42 @@
           margin:0;
           padding-left: 1em;
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #cover .modal{
+    padding: 2em;
+    .modalinfo{
+      font-size: .8em;
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  body{
+    overflow: hidden;
+  }
+  #cover{
+    align-items: flex-start;
+    padding: 5vw;
+    overflow: scroll;
+    .modal{
+      flex-direction: column;
+      align-items: center;
+      .modal-close{
+        top: .25em;
+        right: .25em;
+      }
+      .modalpics{
+        margin: 0 0 1rem 0;
+        width: 100%;
+      } 
+      .modalinfo{
+        margin: 1rem 0 0 0;
+        width: 100%;
       }
     }
   }
