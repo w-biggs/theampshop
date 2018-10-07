@@ -14,6 +14,14 @@ h1{
   margin:.4em auto;
 }
 
+/* IE 10 */
+main { // <main> not working right
+  display: block;
+}
+a img { // images that are also links get borders
+  border: 0;
+}
+
 /* body styles */
 body{
   background-image: url('images/nocolor.jpg');
