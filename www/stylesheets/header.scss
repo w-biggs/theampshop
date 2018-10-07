@@ -52,10 +52,14 @@ header{
   }
 
   #wordmark{
-    margin-top: .5rem;
+    margin: 0.5rem auto 0 auto;
     display: none;
     height: 75%;
     width: auto;
+
+    img{
+      height: 100%;
+    }
   }
 
   address{
@@ -119,9 +123,6 @@ header{
     justify-content: flex-start;
     #nav-expander, #wordmark, a.snipcart-summary{
       display: block;
-    }
-    #wordmark{
-      margin: 0.5rem auto 0 auto;
     }
   }
   header nav{
