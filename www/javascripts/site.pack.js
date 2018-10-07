@@ -23,7 +23,6 @@ var pathName = window.location.pathname;
 if (pathName === "/"){
   pathName = "/index.html"
 }
-console.log(pathName);
 for (var i = 0; i < navItems.length; i++) {
   var href = navItems[i].getAttribute("href").replace(".html","");
   if (pathName.indexOf(href) !== -1){
