@@ -1,6 +1,9 @@
 {
   "name": "theampshop",
   "vapid": {
+    "database": {
+      "dialect": "mysql"
+    }
   },
   "scripts": {
     "start": "vapid start ."
