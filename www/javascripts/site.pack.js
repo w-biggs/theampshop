@@ -45,9 +45,10 @@ for (var i = 0; i < products.length; i++){
 }
 
 var cover = document.getElementById("cover");
+var body = document.getElementsByTagName('body')[0];
 
 function modalShow(productId){
-  document.getElementsByTagName("body")[0].style.overflow = "hidden";
+  body.style.overflow = "hidden";
   cover.classList.remove("hide-modals");
   cover.classList.add("hiding");
   window.requestAnimationFrame(function(){
@@ -63,8 +64,15 @@ for (var i = 0; i < modalCloseButtons.length; i++){
   }
 }
 
+//ESC
+document.addEventListener('keyup', function(e) {
+  if (e.keyCode == 27 && !body.classList.contains('baguetteBox-open') && !cover.classList.contains('hide-modals')) {
+    modalHide();
+  }
+});
+
 function modalHide(){
-  document.getElementsByTagName("body")[0].style.overflow = "";
+  body.style.overflow = "";
   cover.classList.add("hiding");
   cover.addEventListener("transitionend", function handler(event){
     cover.classList.remove("hiding");
