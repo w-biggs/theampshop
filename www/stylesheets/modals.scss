@@ -57,25 +57,25 @@
 
       .imgcontainer{
         width: 100%;
-        padding-bottom: 75%;
+        padding-bottom: 100%;
         position: relative;
         overflow: hidden;
-        border:.125rem #aaa solid;
         height: 0;
         display: block;
 
         img{
           width: 100%;
-          position: absolute;
+          border:.125rem #aaa solid;
+          /*position: absolute;
           top: 50%; bottom: 0; left: 0; right: 0;
-          transform: translateY(-50%);
+          transform: translateY(-50%);'*/
         }
 
-        &.subimg{
+        /*&.subimg{
           width: 22%;
           padding-bottom: 22%;
           margin-top: 4%;
-        }
+        }*/
       }
     }
 
